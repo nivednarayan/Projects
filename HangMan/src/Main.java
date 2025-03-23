@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println("Current word: " + new String(game.guess));
 
-        while (!game.check() && wrongGuess < 5){
+        while (!game.check() && wrongGuess < 6){
             System.out.print("Enter your guess: ");
             String input = sc.next().toLowerCase();
             if (input.length() > 1){
@@ -22,7 +22,8 @@ public class Main {
                 }
                 else{
                     wrongGuess++;
-                    System.out.println("Wrong word guess! Attempts left: " + (5 - wrongGuess));
+                    System.out.println("Wrong word guess! Attempts left: " + (6 - wrongGuess));
+                    game.printHangMan(wrongGuess);
                 }
             }
             else{
@@ -34,7 +35,8 @@ public class Main {
                     game.guessCharacter(c);
                     if (!game.isValid(c)){
                         wrongGuess++;
-                        System.out.println("Wrong! Attempts left: " + (5 - wrongGuess));
+                        System.out.println("Wrong! Attempts left: " + (6 - wrongGuess));
+                        game.printHangMan(wrongGuess);
                     }
                 }
             }

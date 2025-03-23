@@ -23,6 +23,73 @@ public class HangMan {
             "university", "vulnerable", "wonderful", "xenophobia", "yesterday", "zoologist", "accomplishment", "benevolent", "collaboration", "determination"
     };
 
+    String[] hangman = {
+            """
+          +---+
+          |   |
+              |
+              |
+              |
+              |
+        =========
+        """,
+            """
+          +---+
+          |   |
+          O   |
+              |
+              |
+              |
+        =========
+        """,
+            """
+          +---+
+          |   |
+          O   |
+          |   |
+              |
+              |
+        =========
+        """,
+            """
+          +---+
+          |   |
+          O   |
+         /|   |
+              |
+              |
+        =========
+        """,
+            """
+          +---+
+          |   |
+          O   |
+         /|\\  |
+              |
+              |
+        =========
+        """,
+            """
+          +---+
+          |   |
+          O   |
+         /|\\  |
+         /    |
+              |
+        =========
+        """,
+            """
+          +---+
+          |   |
+          O   |
+         /|\\  |
+         / \\  |
+              |
+        =========
+        """
+    };
+
+
     int random = (int) (Math.random() * words.length); // random number
     int n = words[random].length(); // length of the word
     char[] guess = new char[n]; // array to store the guess
@@ -81,5 +148,9 @@ public class HangMan {
             System.out.print(c);
         }
         System.out.println();
+    }
+
+    public void printHangMan(int wg){
+        System.out.println(hangman[wg]);
     }
 }
