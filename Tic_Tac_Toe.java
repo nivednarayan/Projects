@@ -1,3 +1,4 @@
+package projects.Projects;
 import java.util.*;
 class Tic_Tac_Toe {
 	Scanner sc=new Scanner(System.in);
