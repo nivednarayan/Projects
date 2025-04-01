@@ -108,7 +108,7 @@ public class HangMan {
         Arrays.fill(guess, '_');
     }
 
-    public void guessEntireWord(String word){
+    public void guessWord(String word){
         for (char c : word.toCharArray()){
             if (!guessed.contains(c)){
                 guessed.add(c);

@@ -16,7 +16,7 @@ public class Main {
             if (input.length() > 1){
                 if (input.equals(game.s)){
                     System.out.println("Correct! You guessed the whole word!");
-                    game.guessEntireWord(game.s);
+                    game.guessWord(game.s);
                     System.out.println(new String(game.guess));
                     break;
                 }
